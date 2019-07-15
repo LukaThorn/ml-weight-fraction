@@ -56,21 +56,21 @@ sound_file = './data/ping.wav'
 Audio(url=sound_file, autoplay=True)
 
 
-# In[4]:
+# In[5]:
 
 
-# Read in target (ENM) model feature data
-X_enm = pd.read_csv("./data/XX_enm.csv", sep='\t', 
+# Read in ENM feature data
+X_enm = pd.read_csv("./data/ENM-preprocessed-feats.csv", sep='\t', 
                     header='infer', index_col=0)
 
 # Read in ENM labels (maximum_weight_fraction)
-y_enm = pd.read_csv("./data/ENM_conc_export.csv", sep=',', 
+y_enm = pd.read_csv("./data/ENM-clean.csv", sep=',', 
                     header='infer', usecols=[3])
 
 
 # # Classes
 
-# In[5]:
+# In[6]:
 
 
 class HiddenPrints:
@@ -90,7 +90,7 @@ class HiddenPrints:
         sys.stdout = self._original_stdout
 
 
-# In[8]:
+# In[7]:
 
 
 from sklearn.model_selection import GridSearchCV
@@ -160,7 +160,7 @@ class EstimatorSelectionHelper:
 
 # # Pre-processing functions
 
-# In[9]:
+# In[8]:
 
 
 def bins(row):
@@ -177,13 +177,13 @@ def bins(row):
     return val
 
 
-# In[10]:
+# In[9]:
 
 
 bin_enm = np.asarray(y_enm.apply(bins, axis=1))
 
 
-# In[11]:
+# In[10]:
 
 
 def bar_graph_bins(label_data,
@@ -223,7 +223,7 @@ def bar_graph_bins(label_data,
 
 # # Model functions
 
-# In[12]:
+# In[17]:
 
 
 def plot_conf_matrix(cm, 
@@ -269,7 +269,7 @@ def plot_conf_matrix(cm,
     plt.xlabel('Predicted weight fraction')
 
 
-# In[13]:
+# In[18]:
 
 
 def plot_param_opt(param_grid, test_scores, scoring): 
@@ -312,7 +312,7 @@ def plot_param_opt(param_grid, test_scores, scoring):
     plt.show()
 
 
-# In[37]:
+# In[19]:
 
 
 def plot_feat_impt(feature_names, 
@@ -387,7 +387,7 @@ def plot_feat_impt(feature_names,
                 label,
                 (x_value, y_value),         # Place label at end of the bar
                 xytext=(4, 0),              # Horizontally shift label
-                textcoords="offset points", # Interpret `xytext` as offset in points
+                textcoords="offset points", # Interpret `xytext` as offset
                 va='center', ha='left')
     
     fig = matplotlib.pyplot.gcf()
@@ -399,7 +399,7 @@ def plot_feat_impt(feature_names,
     plt.show()
 
 
-# In[15]:
+# In[22]:
 
 
 # Define function to optimize, execute and evaluate a classifier using CV
@@ -418,15 +418,28 @@ def model_opt_exe(classifier,
                   show_cnf_matrix=False, 
                   param_grid=None):
     """
-    1) Optimize the parameters for a classifier, either SVC-RBF or RFC, then     
-    2) Test a pipeline using stratified k-fold cross validation and summarize 
-    the results in a confusion matrix broken down by target bins.
-    Formatted matrices are saved as .png files.
+    This function consists of three parts:
+    1) Optimize the parameters for a classifier, either SVC-RBF or RFC;     
+    2) Fit model pipeline to training data using optimized parameters and 
+    stratified k-fold cross validation;
+    3) Execute the optimized model and summarize its accuracy in a confusion 
+    matrix broken down by WF bins. Formatted confusion matrices are saved as 
+    .png files.
     
     Arguments
     ----------
     classifier: string ('svc' or 'rfc')
         The classifier to use in the pipeline; 'svc' refers to an SVC-RBF
+    X_training: pandas data frame
+        Feature data frame to train the model on
+    y_training: pandas data frame
+        WF (labels) data frame to train the model on
+    X_testing: pandas data frame (default=X_enm)
+        Feature data frame to test the best model on
+    y_testing: pandas data frame (default=y_enm)
+        WF (labels) data frame to test the best model on   
+    seed: int (default=random.randint(1,100))
+        Option to set the seed for CV
     save_fig_name: string (default=None)
         A unique string used at the end of confusion matrix and feature 
         importance (rfc-only) file names for exporting the figures as .png; 
@@ -453,15 +466,21 @@ def model_opt_exe(classifier,
     from numpy import random
     import matplotlib.pyplot as plt
     
+    # =====PART 1=====
+    # Optimize parameters
+    
     # Define pipeline options for parameter optimization
-    rfc = RandomForestClassifier(class_weight='balanced', random_state=seed)
-    svc = SVC(kernel='rbf', class_weight='balanced', random_state=seed)
-    if classifier=='rfc':
+    rfc = RandomForestClassifier(class_weight='balanced', 
+                                 random_state=seed)
+    svc = SVC(kernel='rbf', 
+              class_weight='balanced',  # balances weights of WF bins
+              random_state=seed)
+    if classifier=='rfc':               # set pipeline for RFC
         pipe = Pipeline([
-            ('scale', MinMaxScaler()),
-            ('estimator', rfc)
+            ('scale', MinMaxScaler()),  # normalization from 0 to 1
+            ('estimator', rfc)          # use RFC algorithm specified above
         ])
-    else:
+    else:                               # set pipeline for SVC-RBF
         pipe = Pipeline([
             ('scale', MinMaxScaler()),
             ('estimator', svc)
@@ -469,14 +488,19 @@ def model_opt_exe(classifier,
 
     # Set what kind of stratified k-fold CV to run
     num_folds = 10
+    # When matching augmentation was NOT used, run normal stratified k-fold CV
     if np.all(match_group == None):
         cv = num_folds
+    # When matching augmentation was used, keep each group of matched data 
+    # samples together based on ENM index (match_group) when splitting data 
+    # into folds so that there is no data leakage during CV
     else: 
         gfk = GroupKFold(n_splits=num_folds)
         gfk.random_state = seed
         cv = gfk.split(X_training, y_training, match_group)
 
-    # Perform grid search with CV to find best model parameters
+    # Find best algorithm parameters by searching over a grid using the CV
+    # and pipeline conditions specified above
     n_jobs = 3
     scoring = 'accuracy'
     grid_search = GridSearchCV(pipe, 
@@ -487,52 +511,77 @@ def model_opt_exe(classifier,
                                pre_dispatch=2*n_jobs)
     grid_search.fit(X_training, y_training)
     
-    # Plot/print parameter optimization results
+    # Retrieve accuracy scores for all grid search settings
     test_scores = grid_search.cv_results_.get('mean_test_score')
+    
+    # If optimization plotting is set as True, use plot_param_opt function
+    # to plot a 2D or contour plot to visualize accuracy "hot spots"
     if show_opt_plot:
         plot_param_opt(param_grid, test_scores, scoring)
+    
+    # Retrieve best parameters from grid search (using list comprehension)
     best_params = {k.split("__")[1]: v 
                    for k, v in grid_search.best_params_.items()}
+    
+    # Print best accuracy and parameter values
     print('K-fold CV random state:\t', seed)
     print('Best fold %s:\t%.4f' % (scoring, grid_search.best_score_))
     for k, v in grid_search.best_params_.items(): 
         print('Best %s:\t%.2e' % (k, v))
     
+    # =====PART 2=====
     # Fit optimized pipeline to training data
+    
+    # RFC pipeline                    
     if classifier == 'rfc':
         rfc = RandomForestClassifier(class_weight='balanced', 
-                                     random_state=seed, **best_params)
+                                     random_state=seed, 
+                                     **best_params) # use optimized parameters
         pipe = Pipeline([
             ('scale', MinMaxScaler()),
             ('estimator', rfc)
         ])
-        pipe.fit(X_training, y_training)
-        importances = rfc.feature_importances_
-        # Optional plot feature importance (rfc only)
+        pipe.fit(X_training, y_training)        # fit pipeline to training data
+        importances = rfc.feature_importances_  # get feature impt. from fit
+        
+        # Option to plot feature importance (RFC only)
         if show_feat_impt:
             feature_names = X_training.columns.values
             plot_feat_impt(feature_names, importances, save_fig_name)      
+    
+    # SVC pipeline
     else:
-        svc = SVC(kernel='rbf', class_weight='balanced', 
-                  random_state=seed, **best_params)
+        svc = SVC(kernel='rbf', 
+                  class_weight='balanced', 
+                  random_state=seed, 
+                  **best_params)                # use optimized parameters
         pipe = Pipeline([
             ('scale', MinMaxScaler()),
             ('estimator', svc)
         ])
         pipe.fit(X_training,y_training)
     
-    # Cross-validation for confusion matrix
+    # =====PART 3=====
+    # Model execution and performance summary
+    
     X = np.array(X_testing)
     y = np.array(y_testing)
-    kfold = model_selection.StratifiedKFold(n_splits=17, 
+    
+    # Set CV as ~leave-one-out (based on sample size of the smallest WF bin)
+    kfold = model_selection.StratifiedKFold(n_splits=17, # smallest bin size
                                             shuffle=True, 
                                             random_state=seed)
-    cnf_matrix = np.zeros([3,3])
+    
+    # Placeholder matrix of accuracies averaged across CV folds
+    cnf_matrix = np.zeros([3,3]) # 3 "true" vs 3 "predicted" WF bins
+    
+    # Run fitted pipeline using CV conditions defined above               
     for train_index, test_index in kfold.split(X,y):
-        X_train, X_test = X[train_index], X[test_index]
-        y_train, y_test = y[train_index], y[test_index]
+        X_train, X_test = X[train_index], X[test_index] # split test data
+        y_train, y_test = y[train_index], y[test_index] # into folds
         y_enm_predict = pipe.predict(X_test)
         y[test_index] = y_enm_predict
+        # Write accuracy results to confusion matrix
         cnf_matrix += confusion_matrix(y_test, y_enm_predict)
     cnf_matrix = cnf_matrix.astype(np.int)
     np.set_printoptions(precision=2)
@@ -559,15 +608,16 @@ def model_opt_exe(classifier,
     print('Average normalized accuracy: ', avg_norm)
     
     # Play sound when done running
-    #display(Audio(url=sound_file, autoplay=True))
+    display(Audio(url=sound_file, autoplay=True))
     
+    # Set output based on chosen classifier
     if classifier == 'rfc':
         return avg_norm, importances
     else:
         return avg_norm
 
 
-# In[16]:
+# In[23]:
 
 
 def multi_trials(num_trials, 
@@ -588,23 +638,27 @@ def multi_trials(num_trials,
     seed_set = np.random.choice(np.arange(1,101), 
                                 size=num_trials, 
                                 replace=False)
-    with HiddenPrints():
+    with HiddenPrints():   # Hides function output for all the trials
         rs = []
         for seed in seed_set:
             model_params['seed'] = seed
+            # Apply all-in-one function that optimizes and executes model
             rs_row = model_opt_exe(**model_params)
             rs.append(rs_row)
+    # For RFC, write accuracy and feature importance results
     if model_params['classifier'] == 'rfc':
         results_accu = np.array([x for x, _ in rs]) # list comprehension
         results_impt = np.array([y for _, y in rs])
-        avg_impt = results_impt.mean(axis=0)
-        var_impt = results_impt.var(axis=0)
+        avg_impt = results_impt.mean(axis=0)        # average importance
+        var_impt = results_impt.var(axis=0)         # variance of importance
+    # For SVC-RBF, only write accuracy results
     else:
         results_accu = np.array([x for x in rs])
        
-    mu = results_accu.mean()
-    sigma = results_accu.std()
+    mu = results_accu.mean()   # average accuracy across trials
+    sigma = results_accu.std() # standard deviation
     
+    # Print summary statistics across trials
     print("Avg accuracy:    ", mu)
     print("Median accuracy: ", np.median(results_accu))
     print("StdDev accuracy: ", sigma)
@@ -614,6 +668,7 @@ def multi_trials(num_trials,
     # Play sound when done running
     display(Audio(url=sound_file, autoplay=True))
     
+    # Set output based on chosen classifier
     if model_params['classifier'] == 'rfc':
         return mu, sigma, avg_impt, var_impt
     else: 
@@ -622,7 +677,7 @@ def multi_trials(num_trials,
 
 # # Export
 
-# In[40]:
+# In[24]:
 
 
 get_ipython().system('jupyter nbconvert --to script functions.ipynb')
