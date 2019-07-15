@@ -495,9 +495,9 @@ def model_opt_exe(classifier,
     # samples together based on ENM index (match_group) when splitting data 
     # into folds so that there is no data leakage during CV
     else: 
-        gfk = GroupKFold(n_splits=num_folds)
-        gfk.random_state = seed
-        cv = gfk.split(X_training, y_training, match_group)
+        gkf = GroupKFold(n_splits=num_folds)
+        gkf.random_state = seed
+        cv = gkf.split(X_training, y_training, match_group)
 
     # Find best algorithm parameters by searching over a grid using the CV
     # and pipeline conditions specified above
