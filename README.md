@@ -3,7 +3,7 @@ This project uses machine learning (Python) to optimize an algorithm that can pr
 
 ## Table of Contents
 * [Intro](#intro)
-* [Features](#features)
+* [Core Components](#core-components)
 * [Status](#status)
 * [Contact](#contact)
 
@@ -32,9 +32,9 @@ This project uses machine learning (Python) to optimize an algorithm that can pr
 * svm = support vector machine
 * wf = weight fraction
 
-## Features
+## Core Components
 The suggested order to read/execute code:
-* (optional) datacleaning.R: Assemble, merge and clean organics data. (to be uploaded)
+* (optional) datacleaning.R: Assemble, merge and clean organics data.
 * preprocessENM.ipynb: Preprocessing steps for ENM data, including feature agglomeration.
 * preprocessorganics.ipynb: Preprocessing steps for organics data.
 * modelpipeline.ipynb: Pipeline to test and optimize multiple machine learning algorithms; includes augmentation of ENM data with organics data.
