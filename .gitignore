@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Jupyter Notebook checkpoints
+**/*.ipynb_checkpoints
+
+# Ignore python cache
+__pycache__/
+
+# Ignore all figure files
+figs/
