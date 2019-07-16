@@ -9,3 +9,6 @@ __pycache__/
 
 # Ignore all figure files
 figs/
+
+# Ignore .py copy of functions.ipynb
+functions.py
