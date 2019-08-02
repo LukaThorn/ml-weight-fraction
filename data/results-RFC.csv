@@ -1,13 +1,12 @@
-ENM-Organics-Ratio	Random-Augment-A	Random-Augment-B	Random-Augment-C	Avg-Random-Augment	Std-Random-Augment	Match-Feature-Augment	Match-Label-Augment
-1:0	NaN	NaN	NaN	0.7887198557583953	0.06436807584900284	NaN	NaN
-1:0*	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:1	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:2	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:3	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:4	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:5	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:10	NaN	NaN	NaN	NaN	NaN	NaN	NaN
-1:20	0.8573360378634213	NaN	NaN	0.8573360378634213	NaN	NaN	NaN
-1:50	0.8573360378634213	NaN	NaN	0.8573360378634213	NaN	NaN	NaN
-1:100	0.8573360378634213	NaN	NaN	0.8573360378634213	NaN	NaN	NaN
-1:200	0.8573360378634213	NaN	NaN	0.8573360378634213	NaN	NaN	NaN
+ENM-Organics-Ratio	Avg-Random-Augment	Std-Random-Augment	Avg-Unsupervised-Match	Std-Unsupervised-Match	Avg-Supervised-Match	Std-Supervised-Match
+1:0*	0.0	0.0	0.0	0.0	0.0	0.0
+1:0	0.622	0.018	0.0	0.0	0.0	0.0
+1:1	0.0	0.0	0.0	0.0	0.625	0.02
+1:2	0.0	0.0	0.0	0.0	0.622	0.02
+1:3	0.0	0.0	0.0	0.0	0.615	0.019
+1:4	0.0	0.0	0.0	0.0	0.0	0.0
+1:5	0.0	0.0	0.0	0.0	0.0	0.0
+1:10	0.0	0.0	0.0	0.0	0.0	0.0
+1:20	0.0	0.0	0.0	0.0	0.0	0.0
+1:50	0.0	0.0	0.0	0.0	0.0	0.0
+1:100	0.0	0.0	0.0	0.0	0.0	0.0
