@@ -1,152 +1,152 @@
-ID_BLT,ENM,CASRN,maximum_weight_fraction,size_avg_nm,propMW,propMP,propBP,propDensity,PUCID,gencatID,group,product_type,refined_product_type,assignedID,absorbent,antioxidant,antistain_agent,biocide,brightener,chemical_reaction_regulator,colorant,dehydrating_agent,deodorizer,dispersing_agent,filler,flavouring_nutrient,fuel_agent,hardener,humectant,lubricating_agent,opacifier,uv_stabilizer,viscosity_modifier,OECD_function,functionSum,LOD
-CPI_01,Titanium dioxide,13463-67-7,0.31,0,79.867,1843,2972,4.23,HM.1400.010.040.F,HM,paint/stain and related products ,paint,exterior,F,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,"antistain_agent
+﻿ID_BLT,ENM,CASRN,maximum_weight_fraction,size_avg_nm,propMW,propMP,propBP,propDensity,PUCID,gencatID,group,product_type,refined_product_type,assignedID,absorbent,antioxidant,antistain_agent,biocide,brightener,chemical_reaction_regulator,colorant,dehydrating_agent,deodorizer,dispersing_agent,filler,flavouring_nutrient,fuel_agent,hardener,humectant,lubricating_agent,opacifier,uv_stabilizer,viscosity_modifier,OECD_function,functionSum,LOD,measured
+CPI_01,Titanium dioxide,13463-67-7,0.31,,79.867,1843,2972,4.23,HM.1400.010.040.F,HM,paint/stain and related products ,paint,exterior,F,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,"antistain_agent
 colorant
 uv_stabilizer
-viscosity_modifier",4,NO
+viscosity_modifier",4,0,0
 CPI_02,Copper,7440-50-8,0.001,20,63.546,1083,2567,8.96,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"antioxidant
 biocide
-flavouring_nutrient",3,NO
-CPI_03,Zinc,7440-66-6,0.003,0,65.37,419.53,907,7.14,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"antioxidant
-flavouring_nutrient",2,NO
-CPI_04,Silver,7440-22-4,0.003,1.5,107.868,961.78,2162,10.345,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_05,Silver,7440-22-4,0.0005,1.5,107.868,961.78,2162,10.345,PC.0800.060.001.F,PC,child specific ,baby wipes,child,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_06,Silver,7440-22-4,0.005,0,107.868,961.78,2162,10.345,HM.1100.010.099.A,HM,large appliances ,appliances,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_07,Silver,7440-22-4,0.05,157.5,107.868,961.78,2162,10.345,HM.1100.010.099.A,HM,large appliances ,appliances,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_08,Silver,7440-22-4,0.0022,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
+flavouring_nutrient",3,0,0
+CPI_03,Zinc,7440-66-6,0.003,,65.37,419.53,907,7.14,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"antioxidant
+flavouring_nutrient",2,0,0
+CPI_04,Silver,7440-22-4,0.003,1.5,107.868,961.78,2162,10.345,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_05,Silver,7440-22-4,0.0005,1.5,107.868,961.78,2162,10.345,PC.0800.060.001.F,PC,child specific ,baby wipes,child,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_06,Silver,7440-22-4,0.005,,107.868,961.78,2162,10.345,HM.1100.010.099.A,HM,large appliances ,appliances,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_07,Silver,7440-22-4,0.05,157.5,107.868,961.78,2162,10.345,HM.1100.010.099.A,HM,large appliances ,appliances,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_08,Silver,7440-22-4,0.0022,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
 CPI_09,Silver,7440-22-4,0.002,2,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
+flavouring_nutrient",2,0,0
 CPI_10,Silver,7440-22-4,0.001,0.8,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_11,Silver,7440-22-4,0.002,0,107.868,961.78,2162,10.345,FC.0200.010.004.C,FC,food storage ,food storage,plastic,C,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_12,Silver,7440-22-4,0.0008,0,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_13,Silver,7440-22-4,0.2,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_14,Silver,7440-22-4,0.00099,0,107.868,961.78,2162,10.345,AP.0200.020.099.A,AP,apparel ,pants,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_15,Silver,7440-22-4,0.0006,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_16,Silver,7440-22-4,0.003,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_17,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_18,Silver,7440-22-4,0.0014,0,107.868,961.78,2162,10.345,AP.0200.030.099.A,AP,apparel ,socks,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_19,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_20,Silver,7440-22-4,0.025,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_21,Silver,7440-22-4,0.95,0,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_22,Silver,7440-22-4,0.0022,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_23,Silver,7440-22-4,0.01,0,107.868,961.78,2162,10.345,EL.0600.020.099.A,EL,portable air processing ,portable air filtration,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_24,Silver,7440-22-4,0.003,0,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_25,Silver,7440-22-4,0.002,1,107.868,961.78,2162,10.345,PE.0200.010.050.F,PE,fungicide ,fungicide ,spray,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_26,Silver,7440-22-4,0.002,0,107.868,961.78,2162,10.345,CP.0700.020.050.F,CP,general household cleaning ,disinfectant,spray,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_27,Silver,7440-22-4,0.003,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_28,Silver,7440-22-4,0.003,0,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_29,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
-flavouring_nutrient",2,NO
-CPI_30,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_31,Cerium oxide,1306-38-3,0.0005,0,172.12,2340,3500,7.625,VE.0500.020.099.F,VE,engine maintenance ,auto fluids and additives ,NOC,F,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,"chemical_reaction_regulator
+flavouring_nutrient",2,0,0
+CPI_11,Silver,7440-22-4,0.002,,107.868,961.78,2162,10.345,FC.0200.010.004.C,FC,food storage ,food storage,plastic,C,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_12,Silver,7440-22-4,0.0008,,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_13,Silver,7440-22-4,0.2,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_14,Silver,7440-22-4,0.00099,,107.868,961.78,2162,10.345,AP.0200.020.099.A,AP,apparel ,pants,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_15,Silver,7440-22-4,0.0006,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_16,Silver,7440-22-4,0.003,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_17,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_18,Silver,7440-22-4,0.0014,,107.868,961.78,2162,10.345,AP.0200.030.099.A,AP,apparel ,socks,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_19,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_20,Silver,7440-22-4,0.025,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_21,Silver,7440-22-4,0.013333333,,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_22,Silver,7440-22-4,0.0022,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_23,Silver,7440-22-4,0.01,,107.868,961.78,2162,10.345,EL.0600.020.099.A,EL,portable air processing ,portable air filtration,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_24,Silver,7440-22-4,0.003,,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_25,Silver,7440-22-4,0.002,1,107.868,961.78,2162,10.345,PE.0200.010.050.F,PE,fungicide ,fungicide ,spray,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_26,Silver,7440-22-4,0.002,,107.868,961.78,2162,10.345,CP.0700.020.050.F,CP,general household cleaning ,disinfectant,spray,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_27,Silver,7440-22-4,0.003,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_28,Silver,7440-22-4,0.003,,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_29,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,"biocide
+flavouring_nutrient",2,0,0
+CPI_30,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_31,Cerium oxide,1306-38-3,0.0005,,172.12,2340,3500,7.625,VE.0500.020.099.F,VE,engine maintenance ,auto fluids and additives ,NOC,F,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1,0,0,"chemical_reaction_regulator
 fuel_agent
-opacifier",3,NO
-CPI_34,Selenium,7782-49-2,0.0005,0,78.97,217,684.9,4.79,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_35,Gold,7440-57-5,0.002,5,196.967,1063,2966,19.32,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_36,Platinum,7440-06-4,0.001,17.5,195.085,1772,3827,21.45,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_37,Palladium,7440-05-3,0.001,17.5,106.421,1555,2963,12.02,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_38,Iridium,7439-88-5,0.001,17.5,192.22,2450,4428,22.42,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_39,Titanium,7440-32-6,0.06,0,47.867,1660,3287,4.506,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_40,Silicon dioxide,7631-86-9,0.06,6,60.085,1600,2230,2.5915,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
-CPI_41,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_42,Gold,7440-57-5,0.001,0,196.967,1063,2966,19.32,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,NO
+opacifier",3,0,0
+CPI_34,Selenium,7782-49-2,0.0005,,78.97,217,684.9,4.79,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_35,Gold,7440-57-5,0.002,5,196.967,1063,2966,19.32,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_36,Platinum,7440-06-4,0.001,17.5,195.085,1772,3827,21.45,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_37,Palladium,7440-05-3,0.001,17.5,106.421,1555,2963,12.02,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_38,Iridium,7439-88-5,0.001,17.5,192.22,2450,4428,22.42,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_39,Titanium,7440-32-6,0.06,,47.867,1660,3287,4.506,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_40,Silicon dioxide,7631-86-9,0.06,6,60.085,1600,2230,2.5915,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
+CPI_41,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_42,Gold,7440-57-5,0.001,,196.967,1063,2966,19.32,PH.0200.010.099.P,PH,nutritional supplements ,nutritional supplements,NOC,P,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,flavouring_nutrient,1,0,0
 CPI_43,Zinc oxide,1314-13-2,0.99,30,81.37,1975,2360,5.605,HM.2000.040.040.F,HM,surface sealers ,surface sealer,exterior,F,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,"hardener
-uv_stabilizer",2,NO
+uv_stabilizer",2,0,0
 CPI_44,Tungsten disulfide,12138-09-9,0.07,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,"chemical_reaction_regulator
-lubricating_agent",2,NO
-CPI_45,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,NO
-CPI_46,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,NO
-CPI_47,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,NO
-CPI_48,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,NO
+lubricating_agent",2,0,0
+CPI_45,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,0,0
+CPI_46,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,0,0
+CPI_47,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,0,0
+CPI_48,Tungsten disulfide,12138-09-9,0.05,50,247.98,1250,3900,7.5,VE.0500.030.099.F,VE,engine maintenance ,auto lubricant ,NOC,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,lubricating_agent,1,0,0
 CPI_49,Titanium dioxide,13463-67-7,0.06,1000,79.867,1843,2972,4.23,PC.2300.010.099.F,PC,make-up and related ,blush/bronzer,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"brightener
-viscosity_modifier",2,NO
+viscosity_modifier",2,0,0
 CPI_50,Zinc oxide,1314-13-2,0.06,1000,81.37,1975,2360,5.605,PC.2300.010.099.F,PC,make-up and related ,blush/bronzer,NOC,F,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,"colorant
-filler",2,NO
-CPI_51,Titanium dioxide,13463-67-7,0.25,0,79.867,1843,2972,4.23,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"brightener
+filler",2,0,0
+CPI_51,Titanium dioxide,13463-67-7,0.25,,79.867,1843,2972,4.23,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"brightener
 viscosity_modifier
-uv_stabilizer",3,NO
-CPI_52,Zinc oxide,1314-13-2,0.2,0,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,"colorant
-uv_stabilizer",2,NO
-CPI_53,Zinc oxide,1314-13-2,0.00619469,0,81.37,1975,2360,5.605,HM.1400.010.040.F,HM,paint/stain and related products ,paint,exterior,F,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,"colorant
-uv_stabilizer",2,NO
-CPI_55,Zinc oxide,1314-13-2,0.0022,0,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
+uv_stabilizer",3,0,0
+CPI_52,Zinc oxide,1314-13-2,0.2,,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,"colorant
+uv_stabilizer",2,0,0
+CPI_53,Zinc oxide,1314-13-2,0.00619469,,81.37,1975,2360,5.605,HM.1400.010.040.F,HM,paint/stain and related products ,paint,exterior,F,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,"colorant
+uv_stabilizer",2,0,0
+CPI_55,Zinc oxide,1314-13-2,0.0022,,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
-CPI_56,Zinc oxide,1314-13-2,0.068,0,81.37,1975,2360,5.605,PC.2900.010.050.F,PC,sunscreen ,sunscreen ,spray,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
+uv_stabilizer",3,0,0
+CPI_56,Zinc oxide,1314-13-2,0.068,,81.37,1975,2360,5.605,PC.2900.010.050.F,PC,sunscreen ,sunscreen ,spray,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
+uv_stabilizer",3,0,0
 CPI_57,Zinc oxide,1314-13-2,0.2,25,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
-CPI_58,Zinc oxide,1314-13-2,0.03,0,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
+uv_stabilizer",3,0,0
+CPI_58,Zinc oxide,1314-13-2,0.03,,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
-CPI_59,Zinc oxide,1314-13-2,0.18,0,81.37,1975,2360,5.605,PC.1700.010.099.F,PC,general moisturizing ,hand/body lotion,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
+uv_stabilizer",3,0,0
+CPI_59,Zinc oxide,1314-13-2,0.18,,81.37,1975,2360,5.605,PC.1700.010.099.F,PC,general moisturizing ,hand/body lotion,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
-CPI_60,Zinc oxide,1314-13-2,0.06,0,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
+uv_stabilizer",3,0,0
+CPI_60,Zinc oxide,1314-13-2,0.06,,81.37,1975,2360,5.605,PC.2900.010.099.F,PC,sunscreen ,sunscreen ,NOC,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,"humectant
 filler
-uv_stabilizer",3,NO
-CPI_65,Silver,7440-22-4,0.00001,0,107.868,961.78,2162,10.345,PC.0900.040.099.F,PC,dental care ,denture cleaner,NOC,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_66,Silver,7440-22-4,0.002,0,107.868,961.78,2162,10.345,AP.0200.070.099.A,AP,apparel ,other,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-CPI_81,Silver,7440-22-4,0.001,0,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-RIVM_01,Titanium dioxide,13463-67-7,0.000667408,75,79.867,1843,2972,4.23,PC.0800.080.001.F,PC,child specific ,diaper cream,child,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,viscosity_modifier,1,NO
+uv_stabilizer",3,0,0
+CPI_65,Silver,7440-22-4,0.00001,,107.868,961.78,2162,10.345,PC.0900.040.099.F,PC,dental care ,denture cleaner,NOC,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_66,Silver,7440-22-4,0.002,,107.868,961.78,2162,10.345,AP.0200.070.099.A,AP,apparel ,other,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+CPI_81,Silver,7440-22-4,0.001,,107.868,961.78,2162,10.345,PH.0400.010.050.P,PH,cold relief,cold relief,spray,P,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,0
+RIVM_01,Titanium dioxide,13463-67-7,0.000667408,75,79.867,1843,2972,4.23,PC.0800.080.001.F,PC,child specific ,diaper cream,child,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,viscosity_modifier,1,0,1
 RIVM_02,Zinc oxide,1314-13-2,0.150616032,275,81.37,1975,2360,5.605,PC.0800.080.001.F,PC,child specific ,diaper cream,child,F,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,"filler
-humectant",2,NO
-RIVM_03,Silver,7440-22-4,0.00085,0,107.868,961.78,2162,10.345,FC.0200.010.004.C,FC,food storage ,food storage,plastic,C,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,
-RIVM_09,Silver,7440-22-4,0.0008,0,107.868,961.78,2162,10.345,CS.0500.010.006.A,CS,toys ,toys,soft,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,
-RIVM_10,Silver,7440-22-4,0.00084,13,107.868,961.78,2162,10.345,HM.1400.010.041.F,HM,paint/stain and related products ,paint,interior,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,
+humectant",2,0,1
+RIVM_03,Silver,7440-22-4,0.00085,,107.868,961.78,2162,10.345,FC.0200.010.004.C,FC,food storage ,food storage,plastic,C,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,1,1
+RIVM_09,Silver,7440-22-4,0.0008,,107.868,961.78,2162,10.345,CS.0500.010.006.A,CS,toys ,toys,soft,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,1,1
+RIVM_10,Silver,7440-22-4,0.00084,13,107.868,961.78,2162,10.345,HM.1400.010.041.F,HM,paint/stain and related products ,paint,interior,F,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,1,1
 RIVM_12,Silicon dioxide,7631-86-9,0.002139398,510,60.085,1600,2230,2.5915,PC.2300.080.099.F,PC,make-up and related ,lip balm,NOC,F,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,"absorbent
 filler
 opacifier
-viscosity_modifier",4,NO
+viscosity_modifier",4,0,1
 RIVM_13,Titanium dioxide,13463-67-7,0.026696304,60,79.867,1843,2972,4.23,PC.2300.080.099.F,PC,make-up and related ,lip balm,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"brightener
 uv_stabilizer
-viscosity_modifier",3,NO
+viscosity_modifier",3,0,1
 RIVM_14,Silicon dioxide,7631-86-9,0.019254584,50,60.085,1600,2230,2.5915,PC.1200.020.099.F,PC,facial cleansing and moisturizing ,face cream/moisturizer,NOC,F,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,"absorbent
 filler
 opacifier
-viscosity_modifier",4,NO
+viscosity_modifier",4,0,1
 RIVM_15,Titanium dioxide,13463-67-7,0.003337038,17,79.867,1843,2972,4.23,PC.1200.020.099.F,PC,facial cleansing and moisturizing ,face cream/moisturizer,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"brightener
 uv_stabilizer
-viscosity_modifier",3,NO
-RIVM_16,Aluminum oxide,1344-28-1,0.026453669,0,101.96,2072,2977,3.795,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,"absorbent
+viscosity_modifier",3,0,1
+RIVM_16,Aluminum oxide,1344-28-1,0.026453669,,101.96,2072,2977,3.795,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,"absorbent
 dehydrating_agent
-viscosity_modifier",3,NO
-RIVM_17,Silicon dioxide,7631-86-9,0.04920616,0,60.085,1600,2230,2.5915,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,"absorbent
+viscosity_modifier",3,0,1
+RIVM_17,Silicon dioxide,7631-86-9,0.04920616,,60.085,1600,2230,2.5915,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,"absorbent
 filler
 opacifier
-viscosity_modifier",4,NO
+viscosity_modifier",4,0,1
 RIVM_18,Titanium dioxide,13463-67-7,0.003337038,121,79.867,1843,2972,4.23,PC.1200.030.099.F,PC,facial cleansing and moisturizing ,face mask,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,"brightener
-viscosity_modifier",2,NO
+viscosity_modifier",2,0,1
 RIVM_19,Silver,7440-22-4,0.01,150,107.868,961.78,2162,10.345,AP.0200.030.099.A,AP,apparel ,socks,NOC,A,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"biocide
-deodorizer",2,NO
-RIVM_20,Silver,7440-22-4,0.0008,0,107.868,961.78,2162,10.345,AP.0200.010.099.A,AP,apparel ,shirts,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,
-RIVM_24,Silver,7440-22-4,0.95,12.5,107.868,961.78,2162,10.345,PC.1400.010.099.A,PC,first aid ,band-aids,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,NO
-RIVM_25,Silver,7440-22-4,0.0008,0,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,
+deodorizer",2,0,1
+RIVM_20,Silver,7440-22-4,0.0008,,107.868,961.78,2162,10.345,AP.0200.010.099.A,AP,apparel ,shirts,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,1,1
+RIVM_24,Silver,7440-22-4,0.95,12.5,107.868,961.78,2162,10.345,PC.1400.010.099.A,PC,first aid ,band-aids,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,0,1
+RIVM_25,Silver,7440-22-4,0.0008,,107.868,961.78,2162,10.345,PC.0900.010.099.A,PC,dental care ,toothbrush,NOC,A,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,biocide,1,1,1
 RIVM_26,Titanium dioxide,13463-67-7,0.005005557,125,79.867,1843,2972,4.23,PC.1200.020.099.F,PC,facial cleansing and moisturizing ,face cream/moisturizer,NOC,F,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,"brightener
 uv_stabilizer
-viscosity_modifier",3,NO
-RIVM_29,Silicon dioxide,7631-86-9,0.0002,0,60.085,1600,2230,2.5915,AC.0300.020.050.F,AC,fabric treatment and dye ,fabric paints and sealers,spray,F,0,0,1,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,"antistain_agent
+viscosity_modifier",3,0,1
+RIVM_29,Silicon dioxide,7631-86-9,0.0002,,60.085,1600,2230,2.5915,AC.0300.020.050.F,AC,fabric treatment and dye ,fabric paints and sealers,spray,F,0,0,1,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,"antistain_agent
 dispersing_agent
 filler
-hardener",4,
-RIVM_30,Zinc oxide,1314-13-2,0.00062238,0,81.37,1975,2360,5.605,AC.0300.020.050.F,AC,fabric treatment and dye ,fabric paints and sealers,spray,F,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,"filler
+hardener",4,1,1
+RIVM_30,Zinc oxide,1314-13-2,0.00062238,,81.37,1975,2360,5.605,AC.0300.020.050.F,AC,fabric treatment and dye ,fabric paints and sealers,spray,F,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,"filler
 hardener
-uv_stabilizer",3,
+uv_stabilizer",3,1,1
 RIVM_31,Silicon dioxide,7631-86-9,0.008129713,57,60.085,1600,2230,2.5915,PC.2900.010.050.F,PC,sunscreen ,sunscreen ,spray,F,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,"absorbent
 filler
 opacifier
-viscosity_modifier",4,NO
-RIVM_32,Titanium dioxide,13463-67-7,0.000667408,0,79.867,1843,2972,4.23,PC.2900.010.050.F,PC,sunscreen ,sunscreen ,spray,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,uv_stabilizer,1,
-RIVM_33,Silver,7440-22-4,0.0008,0,107.868,961.78,2162,10.345,PC.1000.010.050.F,PC,deodorant ,deodorant,spray,F,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"biocide
-deodorizer",2,
+viscosity_modifier",4,0,1
+RIVM_32,Titanium dioxide,13463-67-7,0.000667408,,79.867,1843,2972,4.23,PC.2900.010.050.F,PC,sunscreen ,sunscreen ,spray,F,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,uv_stabilizer,1,1,1
+RIVM_33,Silver,7440-22-4,0.0008,,107.868,961.78,2162,10.345,PC.1000.010.050.F,PC,deodorant ,deodorant,spray,F,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,"biocide
+deodorizer",2,1,1
