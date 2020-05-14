@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ml-weight-fraction"
+version = "0.1.0"
+description = "Test several machine learning models to predict the weight fraction of a chemical in a consumer product."
+authors = ["B. Lila Thornton <lila.thornton@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pandas = "^1.0.1"
+numpy = "^1.18.1"
+scipy = "^1.4.1"
+matplotlib = "^3.1.3"
+scikit-learn = "^0.22.1"
+jupyterlab = "^1.2.6"
+
+[tool.poetry.dev-dependencies]
+nb_black = "^1.0.7"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
