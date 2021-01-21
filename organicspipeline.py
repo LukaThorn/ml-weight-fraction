@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Code setup
-
+# ################
+# Code setup
+# ################
 
 # Important imports
 import numpy as np
@@ -32,8 +33,9 @@ import functions as blt
 importlib.reload(blt)
 
 
-# # Data
-
+# ################
+# Data
+# ################
 
 # Source (bulk organics) data
 
@@ -50,7 +52,8 @@ print("X shape:", X.shape)
 print("y shape:", y.shape)
 
 
-# ## Apply WF bins
+# Apply WF bins
+# ################
 
 # Labels (continuous WF data) will be binned into low (0.00-0.01), medium (0.01-0.10) and high (0.10-1.00) categories.
 
@@ -58,7 +61,8 @@ print("y shape:", y.shape)
 ybin = np.asarray(y.apply(blt.bins, axis=1))
 
 
-# ## Split data
+# Split data
+# ################
 
 # Set aside "source" data
 from sklearn.model_selection import train_test_split
@@ -79,31 +83,9 @@ print([X_train.shape, X_test.shape])
 print([y_train.shape, y_test.shape])
 
 
-# # Model optimization
-
-
-# Modeling functions are all called from an external python file, $functions.py$, loaded at the beginning of this script. These will optimize, execute and evaluate different classifiers on several different training datasets using stratified cross validation (CV).
-# 
-# A machine learning pipeline is used to (optionally) augment training data with source data, normalize features on a 0 to 1 scale, then run a classifer (SVC-RBF or RFC) using stratified cross validation. Model parameters are optimized using a parameter grid search.
-# 
-# This table summarizes what the CV pipeline does for each CV fold in terms of X/y and training/validation data. We have altered the "fit" step of sk-learn's Pipeline, which "only transform[s] the observed data (X)" (https://scikit-learn.org/stable/modules/compose.html), so that the y training data will also be transformed in the data augmentation step.
-
-# |     Pipeline Step                |     X_train                    |     y_train              |     X_valid     |     y_valid    |
-# |----------------------------------|--------------------------------|--------------------------|--------------------------|--------------------------|
-# |     (1) Data augmentation        |     fit, transform +mask    |     fit, transform    |                          |                          |
-# |     (2) Feature agglomeration    |     fit, transform +mask       |                          |     transform            |                          |
-# |     (3) Min-max scaling          |     fit, transform             |                          |     transform            |                          |
-# |     (4) Classification           |     fit, predict               |     fit, predict         |     predict              |     predict              |
-
-# Unsupervised and supervised data augmentation rely on cosine similarity to determine which samples from the source dataset are most similar to each sample in the target dataset. 
-# 
-# $\text{cosine similarity} = \frac{A \cdotp B}{\parallel A \parallel \parallel B \parallel} $
-# 
-# We are assuming that the chemical properties of our source data are very different from our target data, so when looking for similar observations to pair, we want to exclude chemical properties from the similarity calculation by applying a *feature mask*. The mask will set chemical property features to zero so that they are effectively ignored by cosine similarity (only during data augmentation). Because chemical properties are the only features that aren't on a scale from 0 to 1, this also means we can perform data augmentation prior to min-max scaling in the cross validation pipeline.
-
-# Resource for writing custom sklearn transformers:
-# https://towardsdatascience.com/writing-custom-scikit-learn-transformers-e07a3cf7b559
-
+# ################
+# Hyperparameterization
+# ################
 
 import random as pyrandom
 from numpy import random
@@ -113,7 +95,6 @@ from sklearn.preprocessing import MinMaxScaler
 # Define feature mask for data augmentation
 feat_names = X_source.columns
 col_mask = ["cprp" not in name for name in feat_names]
-
 
 # Functions for different data augmentation methods
 
@@ -224,7 +205,6 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, balanced_accuracy_score
-# import matplotlib.pyplot as plt
 
 random_state = 1922
 augmentation_kwargs = {
@@ -264,14 +244,14 @@ models = {
 params = {
     "RandomForestClassifier": {
         "augmentation_type": [random_augment, unsupervised_augment, supervised_augment],
-        "augmentation_k": [0, 1, 2, 3, 4, 5, 10, 20],
+        "augmentation_k": [0, 1, 2, 3, 4, 5, 10, 15],
         "estimator__max_depth": np.arange(2, 15, 2),
     },
     "SVC": {
         "augmentation_type": [random_augment, unsupervised_augment, supervised_augment],
-        "augmentation_k": [0, 1, 2, 3, 4, 5, 10, 20],
-        "estimator__C": np.logspace(-1, 7, 9),
-        "estimator__gamma": np.logspace(-7, 1, 9),
+        "augmentation_k": [0, 1, 2, 3, 4, 5, 10, 15],
+        "estimator__C": np.logspace(-1, 7, 5),
+        "estimator__gamma": np.logspace(-7, 1, 5),
     },
 }
 
