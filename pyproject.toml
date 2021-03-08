@@ -5,7 +5,7 @@ description = "Test several machine learning models to predict the weight fracti
 authors = ["B. Lila Thornton <lila.thornton@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "~3.7.3"
 pandas = "^1.0.1"
 numpy = "^1.18.1"
 scipy = "^1.4.1"
