@@ -24,3 +24,9 @@ data/ENM-pre-preprocessed-feats.csv
 
 # Ignore PyCharm Files
 .idea/
+
+# Ignore Vagrant files
+.vagrant/
+
+# Ignore Singularity images
+*.sif
