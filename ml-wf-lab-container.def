@@ -43,9 +43,16 @@ From: python:3.7.10-buster
   # but still LTS, version. A specific commit hash has been used for to aid
   # reproducibility, but it may be appropriate to change it to a newer commit in
   # the future. After apt-get is done, we clean out its cache to save space.
-  curl -fsSL https://raw.githubusercontent.com/nodesource/distributions/1e1ee93cffc254f9fa71ca10465585496a7d148d/deb/setup_lts.x \
+  curl -fsSL 'https://raw.githubusercontent.com/nodesource/distributions/1e1ee93cffc254f9fa71ca10465585496a7d148d/deb/setup_lts.x' \
     | bash -
   apt-get -y update && apt-get -y install nodejs && apt-get clean
+
+  # Download and make source sans font accessible by notebooks.
+  curl -fsSL -o /tmp/source-sans.zip 'https://github.com/adobe-fonts/source-sans/releases/download/3.028R/source-sans-3v028R.zip'
+  unzip -d /tmp/source-sans /tmp/source-sans.zip
+  cp -r /tmp/source-sans/TTF /usr/share/fonts/truetype/source-sans
+  rm -rf /tmp/source-sans /tmp/source-sans.zip
+  fc-cache -svf
 
   # Make sure that pip is up-to-date, then use it to install poetry. Again, we
   # avoid adding package manager cache files to the image.
