@@ -30,3 +30,6 @@ data/ENM-pre-preprocessed-feats.csv
 
 # Ignore Singularity images
 *.sif
+
+# Ignore dask stuff
+/dask-worker-space/
