@@ -1,9 +1,0 @@
-ENM-Organics-Ratio	Avg-Random-Augment	Std-Random-Augment	Avg-Unsupervised-Match	Std-Unsupervised-Match
-1:0	0.693	0.011	0.693	0.011
-1:1	0.697	0.017	0.72	0.007
-1:2	0.69	0.014	0.727	0.006
-1:3	0.692	0.014	0.724	0.003
-1:4	0.698	0.015	0.732	0.006
-1:5	0.696	0.017	0.736	0.006
-1:10	0.702	0.014	0.727	0.009
-1:20	0.71	0.017	NaN	NaN
