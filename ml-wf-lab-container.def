@@ -1,0 +1,86 @@
+# Singularity container definition for ml-weight-fraction
+#
+# This file describes a Singularity container for running ml-weight-fraction in
+# a Jupyter Lab notebook. The container includes the notebooks; since they write
+# data out to disk, a persistent overlay is required when using the bundled
+# versions.
+#
+# .def files: https://sylabs.io/guides/3.7/user-guide/definition_files.html
+# overlays: https://sylabs.io/guides/3.7/user-guide/persistent_overlays.html
+
+# We start with an official Python image, selecting a particular Python version.
+# This is the Debian 10 (Buster) image, rather than the Alpine image; while the
+# Alpine image is smaller, the image takes much longer to build (due to lack of
+# binary wheels), and may have runtime issues due to the different libc.
+Bootstrap: docker
+From: python:3.7.10-buster
+
+%setup
+  # ml-weight-fraction files will be placed in /app/src in the container.
+  mkdir -p ${SINGULARITY_ROOTFS}/app/src
+
+  # This copies only the files that Git knows about (including staged files).
+  # Crucially, this prevents the SIF image from being copied in. Additionally,
+  # it prevents .gitignore'd files like __pycache__ from being included.
+  git ls-files -z \
+    | xargs -0 tar cf - \
+    | tar xf - -C ${SINGULARITY_ROOTFS}/app/src
+
+%environment
+  # Listening on * allows connecting from outside the container. (This could
+  # also be '0.0.0.0' for IPv4-only or '::' for IPv6 and maybe IPv4.) We use the
+  # usual Jupyter port.
+  export LISTEN_IP='*'
+  export LISTEN_PORT=8888
+
+  # Sets the C locale to a known-good value. This ensures that certain libc
+  # functions Python uses behave in a predictable manner.
+  export LC_ALL=C
+
+%post
+  # Jupyter needs a recent version of Node.js to function, one newer than what
+  # Debian Buster provides. The downloaded script sets up a PPA with an newer,
+  # but still LTS, version. A specific commit hash has been used for to aid
+  # reproducibility, but it may be appropriate to change it to a newer commit in
+  # the future. After apt-get is done, we clean out its cache to save space.
+  curl -fsSL 'https://raw.githubusercontent.com/nodesource/distributions/1e1ee93cffc254f9fa71ca10465585496a7d148d/deb/setup_lts.x' \
+    | bash -
+  apt-get -y update && apt-get -y install nodejs && apt-get clean
+
+  # Download and make source sans font accessible by notebooks.
+  curl -fsSL -o /tmp/source-sans.zip 'https://github.com/adobe-fonts/source-sans/releases/download/3.028R/source-sans-3v028R.zip'
+  unzip -d /tmp/source-sans /tmp/source-sans.zip
+  cp -r /tmp/source-sans/TTF /usr/share/fonts/truetype/source-sans
+  rm -rf /tmp/source-sans /tmp/source-sans.zip
+  fc-cache -svf
+
+  # Make sure that pip is up-to-date, then use it to install poetry. Again, we
+  # avoid adding package manager cache files to the image.
+  pip install --no-cache-dir -U pip && pip install --no-cache-dir poetry
+
+  # Create a new virtualenv and activate it
+  python -m venv /app/env && . /app/env/bin/activate
+
+  # If poetry sees that it's already in a virtualenv, it will use it instead of
+  # creating a new poetry-managed one.
+  cd /app/src && poetry install
+
+  # Install any Jupyter Lab extensions we can't get using pip.
+  jupyter labextension install @jupyterlab/toc-extension
+
+  # These commands bake the virtualenv activation (above) into the container, so
+  # that all commands run inside it are run in its context.
+  echo "export PATH=\"${PATH}\"" >> $SINGULARITY_ENVIRONMENT
+  echo "export VIRTUAL_ENV=\"${VIRTUAL_ENV}\"" >> $SINGULARITY_ENVIRONMENT
+
+%startscript
+  # Command to run when using 'singularity instance start ...' - sets up the
+  # listen and port, and points Jupyter Lab at the notebook directory.
+  exec jupyter lab \
+    --ip=$LISTEN_IP --port=$LISTEN_PORT \
+    --no-browser --notebook-dir=/app/src
+
+%runscript
+  # Command to run when using 'singularity run ...' - the --ip and --port flags
+  # should be provided as arguments.
+  exec jupyter lab --no-browser --notebook-dir=/app/src "$@"
