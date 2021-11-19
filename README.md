@@ -1,5 +1,5 @@
 # ml-weight-fraction
-This project uses machine learning (Python) to optimize an algorithm that can predict the weight fraction of emerging chemicals in consumer products.
+This project uses machine learning (Python programming language) to approximate weight fractions of emerging chemicals in consumer products.
 
 ## Table of Contents
 * [Intro](#intro)
@@ -9,10 +9,8 @@ This project uses machine learning (Python) to optimize an algorithm that can pr
 
 ## Intro
 ### Suggested Software
-* Python 3.7.3 (via Anaconda v1.7.2)
-* Jupyter Notebook (via Anaconda v1.7.2)
-* R 3.6.0
-* (Optional) R Studio
+* Python 3.7.3
+* Poetry
 ### Acronyms and Abbreviations
 * arr = array
 * bp = boiling point
@@ -34,14 +32,14 @@ This project uses machine learning (Python) to optimize an algorithm that can pr
 
 ## Core Components
 The suggested order to read/execute code:
-* (optional) datacleaning.R: Assemble, merge and clean organics data.
-* preprocessENM.ipynb: Preprocessing steps for ENM data, including feature agglomeration.
-* preprocessorganics.ipynb: Preprocessing steps for organics data.
-* modelpipeline.ipynb: Pipeline to test and optimize multiple machine learning algorithms; includes augmentation of ENM data with organics data.
 * functions.ipynb: Contains functions used across multiple notebooks.
+* preprocessENM.ipynb: Preprocessing steps for the nanomaterials product dataset (data-poor).
+* preprocessorganics.ipynb: Preprocessing steps for the bulk-scale organic chemical product dataset (data-rich).
+* modelpipeline.ipynb: Framework for data-poor scenarios that tests and optimizes multiple machine learning prediction algorithms; includes (optional) augmentation of nanomaterials product data with organics product data.
+* organicspipeline.ipynb: Framework for data-rich scenarios that tests and optimizes multiple machine learning prediction algorithms
 
 ## Status
-This project is still under development.
+This project has been submitted for publication.
 
 ## Contact
-B. Lila Thornton (bmt13@duke.edu)
+Luka L. Thornton (thorn.luka@gmail.com)
