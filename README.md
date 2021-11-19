@@ -8,6 +8,8 @@ This project uses machine learning (Python programming language) to approximate 
 * [Contact](#contact)
 
 ## Intro
+The repository can be launched as a collection of interactive code notebooks in your browser.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukaThorn/ml-weight-fraction/master)
 ### Suggested Software
 * Python 3.7.3
 * Poetry
