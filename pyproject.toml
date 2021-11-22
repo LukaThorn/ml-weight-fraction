@@ -2,7 +2,7 @@
 name = "ml-weight-fraction"
 version = "0.1.0"
 description = "Test several machine learning models to predict the weight fraction of a chemical in a consumer product."
-authors = ["B. Lila Thornton <lila.thornton@gmail.com>"]
+authors = ["Luka L. Thornton <thorn.luka@gmail.com>"]
 packages = [ { include = "*.py" } ]
 
 [tool.poetry.dependencies]
