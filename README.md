@@ -1,8 +1,10 @@
 # ml-weight-fraction
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukaThorn/ml-weight-fraction/master) 
+[![GNUv3.0](https://img.shields.io/github/license/LukaThorn/ml-weight-fraction)](https://github.com/LukaThorn/ml-weight-fraction/blob/master/LICENSE)
 This project uses machine learning (Python programming language) to approximate weight fractions of emerging chemicals in consumer products.
 
 ## Table of Contents
-* [Launching the Project](#intro)
+* [Launching the Project](#launching-the-project)
 * [Core Components](#core-components)
 * [Status](#status)
 * [Contact](#contact)
@@ -14,11 +16,11 @@ Before cloning this repository, try launching it through your browser using this
 
 Through the Binder interface, users may access all of our code in interactive iPython notebooks self-contained in a virtual, executable environment. I.e., the code for this project is entirely reproducible simply by clicking the button above.
 ### Suggested Software
-If you wish to clone our Git repository, we suggest having the following software versions installed:
+If you prefer to clone our Git repository, we suggest these software versions:
 * Python 3.7.3
-* Poetry 0.1.0 or higher
+* Poetry 1.0 or higher
 
-After cloning the repository, the project may be launched by running the following in your command line interface:
+After cloning, launch the project by running the following in your command line interface:
 ```
 cd ml-weight-fraction
 poetry install
@@ -26,9 +28,9 @@ poetry run jupyter lab
 ```
 ## Core Components
 The suggested order to read/execute iPython notebooks:
-* functions.ipynb: Contains functions used across multiple notebooks.
+* functions.ipynb: Contains functions used across multiple notebooks. (optional with Binder)
 * modelpipeline.ipynb: Framework for data-poor scenarios that tests and optimizes multiple machine learning prediction algorithms; includes (optional) augmentation of nanomaterials product data with organics product data.
-* organicspipeline.ipynb: Framework for data-rich scenarios that tests and optimizes multiple machine learning prediction algorithms
+* organicspipeline.ipynb: Framework for data-rich scenarios that tests and optimizes multiple machine learning prediction algorithms.
 
 Post-processing data files are provided. If you wish to go through the pre-processing steps and generate data summaries, run these notebooks:
 * preprocessENM.ipynb: Preprocessing steps for the nanomaterials product dataset (data-poor).
