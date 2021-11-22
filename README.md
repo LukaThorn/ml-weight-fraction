@@ -1,6 +1,7 @@
 # ml-weight-fraction
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukaThorn/ml-weight-fraction/master) 
 [![GNUv3.0](https://img.shields.io/github/license/LukaThorn/ml-weight-fraction)](https://github.com/LukaThorn/ml-weight-fraction/blob/master/LICENSE)
+
 This project uses machine learning (Python programming language) to approximate weight fractions of emerging chemicals in consumer products.
 
 ## Table of Contents
