@@ -12,16 +12,18 @@ Before cloning this repository, try launching it through your browser using this
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukaThorn/ml-weight-fraction/master)
 
-Through Binder, users may access all of our code in interactive iPython notebooks self-contained in a virtual, executable environment. I.e., the code for this project is entirely reproducible simply by clicking the button above.
+Through the Binder interface, users may access all of our code in interactive iPython notebooks self-contained in a virtual, executable environment. I.e., the code for this project is entirely reproducible simply by clicking the button above.
 ### Suggested Software
 If you wish to clone our Git repository, we suggest having the following software versions installed:
 * Python 3.7.3
 * Poetry 0.1.0 or higher
 
 After cloning the repository, the project may be launched by running the following in your command line interface:
-    $cd ml-weight-fraction$
-    $poetry install$
-    $poetry run jupyter lab$
+```
+cd ml-weight-fraction
+poetry install
+poetry run jupyter lab
+```
 ## Core Components
 The suggested order to read/execute iPython notebooks:
 * functions.ipynb: Contains functions used across multiple notebooks.
