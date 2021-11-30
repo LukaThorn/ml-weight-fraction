@@ -11,7 +11,7 @@ This project uses machine learning (Python programming language) to approximate 
 * [Contact](#contact)
 
 ## Launching the project
-Before cloning this repository, try launching it through your browser using this Binder URL:
+Before cloning this repository, try launching it through your browser:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/LukaThorn/ml-weight-fraction/master)
 
@@ -29,7 +29,7 @@ poetry run jupyter lab
 ```
 ## Core Components
 The suggested order to read/execute iPython notebooks:
-* functions.ipynb: Contains functions used across multiple notebooks. (optional with Binder)
+* functions.ipynb: Contains functions used across multiple notebooks (optional with Binder).
 * modelpipeline.ipynb: Framework for data-poor scenarios that tests and optimizes multiple machine learning prediction algorithms; includes (optional) augmentation of nanomaterials product data with organics product data.
 * organicspipeline.ipynb: Framework for data-rich scenarios that tests and optimizes multiple machine learning prediction algorithms.
 
