@@ -1,0 +1,11 @@
+cff-version: 1.0.0
+message: "If you use this code, please cite it as below."
+authors:
+- family-names: "Thornton"
+  given-names: "Luka"
+  orcid: "https://orcid.org/0000-0003-2185-6281"
+title: "Chemical Weight Fraction Estimation"
+version: 1.0.0
+doi: 10.26434/chemrxiv-2021-96wvd
+date-released: 2021-12-21
+url: "https://github.com/LukaThorn/ml-weight-fraction"
